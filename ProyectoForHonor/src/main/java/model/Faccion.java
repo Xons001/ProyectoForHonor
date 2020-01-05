@@ -32,6 +32,21 @@ public class Faccion {
 		return lore;
 	}
 
+	@Column(name = "faccion_id")
+	public void setFaccion_id(Integer faccion_id) {
+		this.faccion_id = faccion_id;
+	}
+
+	@Column(name = "nombre_faccion")
+	public void setNombre_faccion(String nombre_faccion) {
+		this.nombre_faccion = nombre_faccion;
+	}
+
+	@Column(name = "lore")
+	public void setLore(String lore) {
+		this.lore = lore;
+	}
+
 	@Override
 	public String toString() {
 		return "Faccion [faccion_id=" + faccion_id + ", nombre_faccion=" + nombre_faccion + ", lore=" + lore + "]";

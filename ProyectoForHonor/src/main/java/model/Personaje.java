@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "personaje")
-public class Personajes {
+public class Personaje {
 
 	private Integer personaje_id;
 	private String nombre_personaje;
@@ -44,9 +44,34 @@ public class Personajes {
 		return faccion_id;
 	}
 
+	@Column(name = "personaje_id")
+	public void setPersonaje_id(Integer personaje_id) {
+		this.personaje_id = personaje_id;
+	}
+
+	@Column(name = "nombre_persoanje")
+	public void setNombre_personaje(String nombre_personaje) {
+		this.nombre_personaje = nombre_personaje;
+	}
+
+	@Column(name = "ataque")
+	public void setAtaque(int ataque) {
+		this.ataque = ataque;
+	}
+
+	@Column(name = "defensa")
+	public void setDefensa(int defensa) {
+		this.defensa = defensa;
+	}
+
+	@Column(name = "faccion_id")
+	public void setFaccion_id(int faccion_id) {
+		this.faccion_id = faccion_id;
+	}
+
 	@Override
 	public String toString() {
-		return "Personajes [personaje_id=" + personaje_id + ", nombre_personaje=" + nombre_personaje + ", ataque="
+		return "Personaje [personaje_id=" + personaje_id + ", nombre_personaje=" + nombre_personaje + ", ataque="
 				+ ataque + ", defensa=" + defensa + ", faccion_id=" + faccion_id + "]";
 	}
 	
