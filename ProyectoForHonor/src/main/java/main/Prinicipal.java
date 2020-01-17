@@ -20,23 +20,19 @@ public class Prinicipal {
 
 		entityManager.getTransaction().begin();
 
-		//		TypedQuery<Personajes> query = entityManager.createQuery("SELECT p FROM personaje p", Personajes.class);
-		//		List<Personajes> results = query.getResultList();
-		//		
-		//		for (Personajes p : results) {
-		//			System.out.println("Nombre: " + p.getNombre_personaje());
-		//			System.out.println("Ataque" + p.getAtaque());
-		//			System.out.println("Defensa" + p.getDefensa());
-		//			System.out.println("Faccion_id" + p.getFaccion_id());
-		//		}
+		Query query = entityManager.createQuery("select p from Personaje p");
+		List<Personaje> results = (List<Personaje>) query.getResultList();
 
-		String sql = "SELECT p from personaje p where p.personaje_id >= 0";
-		Query query = entityManager.createQuery(sql);		 
-		List <Personaje> results = query.getResultList();
-		
 		for (Personaje p : results) {
-			p.toString();
+			System.out.println("========================================");
+			System.out.println("Personaje_id:" + p.getPersonaje_id());
+			System.out.println("Nombre: " + p.getNombre_personaje());
+			System.out.println("Ataque" + p.getAtaque());
+			System.out.println("Defensa" + p.getDefensa());
+			System.out.println("Faccion_id" + p.getFaccion_id());			
+			System.out.println("========================================");
 		}
+
 		entityManager.getTransaction().commit();
 
 		entityManager.close();

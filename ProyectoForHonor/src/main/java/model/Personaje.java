@@ -24,7 +24,7 @@ public class Personaje {
 		return personaje_id;
 	}
 
-	@Column(name = "nombre_persoanje")
+	@Column(name = "nombre_personaje")
 	public String getNombre_personaje() {
 		return nombre_personaje;
 	}
@@ -49,7 +49,7 @@ public class Personaje {
 		this.personaje_id = personaje_id;
 	}
 
-	@Column(name = "nombre_persoanje")
+	@Column(name = "nombre_personaje")
 	public void setNombre_personaje(String nombre_personaje) {
 		this.nombre_personaje = nombre_personaje;
 	}
